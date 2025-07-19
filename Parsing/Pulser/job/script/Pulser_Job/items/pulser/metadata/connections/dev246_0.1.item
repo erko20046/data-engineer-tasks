@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.relational="http:///orgomg/cwm/resource/relational.ecore">
+  <TalendMetadata:DatabaseConnection xmi:id="_rmhBMLb6Eeyl8Z3PQWYU3g" name="dev246" id="_eMNYMLb6Eeyl8Z3PQWYU3g" label="dev246" dataPackage="_qjexYByIEe2t8Oq8aPxwMg" DatabaseType="PostgreSQL" DriverClass="org.postgresql.Driver" URL="jdbc:postgresql://192.168.1.246:30321/counterparty?" dbVersionString="V9_X" Port="30321" Username="administrator" Password="enc:system.encryption.key.v1:o8uQj8nKs8XSk+OdM5MKKfjnqujLO0wi6AGkrfOzbI5d5KhnQu6Nqu6wkw==" ServerName="192.168.1.246" DatasourceName="" FileFieldName="" SID="counterparty" SqlSynthax="" StringQuote="" NullChar="" DbmsId="postgres_id" ProductId="POSTGRESQL" AdditionalParams="" StandardSQL="true" SQLMode="false" UiSchema="counterparty_data">
+    <taggedValue xmi:id="_rmhBMbb6Eeyl8Z3PQWYU3g" tag="Is Conn Need Reload" value="false"/>
+    <taggedValue xmi:id="_rmz8ILb6Eeyl8Z3PQWYU3g" tag="package filter" value=""/>
+    <taggedValue xmi:id="_rm9GELb6Eeyl8Z3PQWYU3g" tag="Status" value=""/>
+    <taggedValue xmi:id="_rm9GEbb6Eeyl8Z3PQWYU3g" tag="Version" value="0.1"/>
+    <taggedValue xmi:id="_rm9GErb6Eeyl8Z3PQWYU3g" tag="Purpose" value=""/>
+    <taggedValue xmi:id="_rm9GE7b6Eeyl8Z3PQWYU3g" tag="Description" value=""/>
+    <taggedValue xmi:id="_rm9GFLb6Eeyl8Z3PQWYU3g" tag="Author" value=""/>
+    <taggedValue xmi:id="_rm9GFbb6Eeyl8Z3PQWYU3g" tag="otherParameter"/>
+    <taggedValue xmi:id="_rnUScLb6Eeyl8Z3PQWYU3g" tag="DB ProductName" value="PostgreSQL"/>
+    <taggedValue xmi:id="_rnUScbb6Eeyl8Z3PQWYU3g" tag="DB ProductVersion" value="11.11 (Debian 11.11-1.pgdg90+1)"/>
+    <taggedValue xmi:id="_rnUScrb6Eeyl8Z3PQWYU3g" tag="DB IdentifierQuoteString" value="&quot;"/>
+    <parameters xmi:id="_rmhBMrb6Eeyl8Z3PQWYU3g" key="CONN_PARA_KEY_USERNAME" value="administrator"/>
+    <parameters xmi:id="_pVVjQByIEe2t8Oq8aPxwMg" key="CONN_PARA_KEY_MAPRDB_TABLE_NS_MAPPING" value=""/>
+  </TalendMetadata:DatabaseConnection>
+  <orgomg.cwm.resource.relational:Catalog xmi:id="_qjexYByIEe2t8Oq8aPxwMg" name="counterparty" dataManager="_rmhBMLb6Eeyl8Z3PQWYU3g">
+    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_qjexYRyIEe2t8Oq8aPxwMg" name="counterparty_data"/>
+  </orgomg.cwm.resource.relational:Catalog>
+</xmi:XMI>
