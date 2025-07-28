@@ -1,0 +1,59 @@
+{
+  "parser": {},
+  "scrapyx": {
+    "service_name": "upack",
+    "environment": "development",
+    "proxy": {
+      "connection_method": "gRPC",
+      "host": "10.10.22.100",
+      "port": 31301,
+      "count": 50,
+      "method": "RANDOM",
+      "max_proxy_attempts": 3
+    },
+    "requests": {
+      "attempts": 5,
+      "attempt_delay": 5,
+      "timeout": 100
+    },
+    "postgresql": {
+      "parsing": {
+        "host": "parsing-db.adata.kz",
+        "port": 5432,
+        "username": "administrator",
+        "password": "Z4P6PjEHnJ5nPT",
+        "database": "parsing_dev"
+      }
+    },
+    "files": {
+      "base_path": "/var/files/",
+      "folder": "products"
+    },
+    "logger": {
+      "logger_name": "upack",
+      "version": 1,
+      "disable_existing_loggers": true,
+      "formatters": {
+        "console": {
+          "format": "%(asctime)s — [ %(levelname)s ] — %(message)s"
+        }
+      },
+      "handlers": {
+        "console": {
+          "class": "logging.StreamHandler",
+          "stream": "ext://sys.stdout",
+          "formatter": "console"
+        }
+      },
+      "loggers": {
+        "": {
+          "handlers": [
+            "console"
+          ],
+          "level": "INFO",
+          "propagate": true
+        }
+      }
+    }
+  }
+}
