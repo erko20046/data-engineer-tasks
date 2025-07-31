@@ -1,0 +1,111 @@
+syntax = "proto3";
+
+import "google/protobuf/wrappers.proto";
+import "google/protobuf/timestamp.proto";
+
+
+option csharp_namespace = "TurkeyCompanyData";
+option go_package = "/turkey";
+
+package turkey_company_data;
+
+service TurkeyCompaniesScraper{
+  rpc LoadData(LoadDataRequest) returns (LoadDataReply);
+}
+
+message LoadDataRequest{
+  string name = 1;
+}
+
+message LoadDataReply {
+  string message = 1;
+  Data data = 2;
+}
+
+message Data {
+  repeated Company units = 1;
+}
+
+message Company {
+  google.protobuf.StringValue uin = 1;
+  google.protobuf.StringValue chamber_reg_no = 2;
+  google.protobuf.StringValue central_reg_system_no = 3;
+  google.protobuf.StringValue name = 4;
+  google.protobuf.StringValue address = 5;
+  google.protobuf.StringValue status = 6;
+  google.protobuf.Timestamp reg_date = 7;
+  google.protobuf.Timestamp main_contract_reg_date = 8;
+  google.protobuf.StringValue tax_number = 9;
+  google.protobuf.StringValue capital = 10;
+  google.protobuf.StringValue occupational_group = 11;
+  repeated Industry industries = 12;
+  repeated FormerCompanyName former_names = 13;
+
+
+
+  repeated Partner partners = 14;
+  repeated FormerPartner former_partners = 15;
+  repeated DirectorBoard director_board = 16;
+  repeated FormerDirectorBoard former_director_board = 17;
+  repeated Official officials = 18;
+  repeated FormerOfficial former_officials = 19;
+  Contacts contacts = 20;
+  repeated Media media = 21;
+}
+
+message Contacts {
+  google.protobuf.StringValue fax = 1;
+  google.protobuf.StringValue phone = 2;
+  google.protobuf.StringValue website = 3;
+}
+
+message Industry {
+  google.protobuf.StringValue branch = 1;
+}
+
+message FormerCompanyName {
+  google.protobuf.StringValue name = 1;
+}
+
+message Partner {
+  google.protobuf.StringValue name = 1;
+  google.protobuf.StringValue position = 2;
+  google.protobuf.StringValue capital = 3;
+}
+
+message FormerPartner {
+  google.protobuf.StringValue name = 1;
+  google.protobuf.StringValue position = 2;
+  google.protobuf.StringValue capital = 3;
+}
+
+message DirectorBoard {
+  google.protobuf.StringValue name = 1;
+  google.protobuf.StringValue position = 2;
+  google.protobuf.StringValue capital = 3;
+}
+
+message FormerDirectorBoard {
+  google.protobuf.StringValue name = 1;
+  google.protobuf.StringValue position = 2;
+  google.protobuf.StringValue capital = 3;
+}
+
+message Official {
+  google.protobuf.StringValue name = 1;
+  google.protobuf.StringValue task = 2;
+  google.protobuf.Timestamp end_date = 3;
+}
+
+message FormerOfficial {
+  google.protobuf.StringValue name = 1;
+  google.protobuf.StringValue task = 2;
+  google.protobuf.Timestamp end_date = 3;
+}
+
+message Media {
+  google.protobuf.StringValue transaction = 1;
+  google.protobuf.StringValue doc_number = 2;
+  google.protobuf.StringValue reg_doc_type = 3;
+  google.protobuf.Timestamp reg_history = 4;
+}
