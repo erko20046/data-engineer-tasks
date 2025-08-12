@@ -1,2 +1,0 @@
-from .individual_mapper import IndividualMapper
-from .taxpayer_mapper import TaxpayerMapper
