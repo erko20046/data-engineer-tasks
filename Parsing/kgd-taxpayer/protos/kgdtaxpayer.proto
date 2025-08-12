@@ -1,0 +1,38 @@
+syntax = "proto3";
+
+import "google/protobuf/wrappers.proto";
+import "google/protobuf/timestamp.proto";
+
+option csharp_namespace = "TaxpayerService";
+
+package taxpayer;
+
+service TaxpayerScraper {
+  rpc LoadData (LoadDataRequest) returns (LoadDataReply);
+}
+
+message LoadDataRequest {
+  string uin_or_name = 1;
+  string mode = 2;
+}
+
+message LoadDataReply {
+  string message = 1;
+  TaxpayerData data = 2;
+}
+
+message TaxpayerData {
+  repeated Taxpayer taxpayers = 1;
+}
+
+message Taxpayer {
+  google.protobuf.StringValue rnn = 1;
+  google.protobuf.Timestamp date_reg = 2;
+  google.protobuf.Timestamp date_unreg = 3;
+  google.protobuf.StringValue reason_unreg = 4;
+  google.protobuf.StringValue add_info = 5;
+  google.protobuf.StringValue full_name = 6;
+  google.protobuf.StringValue type = 7;
+  google.protobuf.StringValue iin_bin = 8;
+  google.protobuf.StringValue stop_period = 9;
+}

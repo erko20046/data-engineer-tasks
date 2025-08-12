@@ -1,0 +1,1 @@
+from .generated import kgdindividual_pb2, kgdindividual_pb2_grpc, kgdtaxpayer_pb2_grpc, kgdtaxpayer_pb2
